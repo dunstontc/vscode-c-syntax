@@ -35,6 +35,7 @@
         "color": "#1e1e1e",
         "theme": "dark"
     },
+    "icon": "assets/c.png",
     "devDependencies": {
         "gulp": "^3.9.1",
         "gulp-json5-to-json": "^0.2.1",
