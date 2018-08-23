@@ -1,7 +1,60 @@
 {
   "repository": {
-    "operator": {
-      "patterns": []
-    }
+		"operator": {
+			"patterns": [
+				{
+					"match": "(?<![\\w$])(sizeof)(?![\\w$])",
+					"name": "keyword.operator.sizeof.c"
+				},
+				{
+					"match": "--",
+					"name": "keyword.operator.decrement.c"
+				},
+				{
+					"match": "\\+\\+",
+					"name": "keyword.operator.increment.c"
+				},
+				{
+					"match": "%=|\\+=|-=|\\*=|(?<!\\()/=",
+					"name": "keyword.operator.assignment.compound.c"
+				},
+				{
+					"match": "&=|\\^=|<<=|>>=|\\|=",
+					"name": "keyword.operator.assignment.compound.bitwise.c"
+				},
+				{
+					"match": "<<|>>",
+					"name": "keyword.operator.bitwise.shift.c"
+				},
+				{
+					"match": "!=|<=|>=|==|<|>",
+					"name": "keyword.operator.comparison.c"
+				},
+				{
+					"match": "&&|!|\\|\\|",
+					"name": "keyword.operator.logical.c"
+				},
+				{
+					"match": "&|\\||\\^|~",
+					"name": "keyword.operator.c"
+				},
+				{
+					"match": "=",
+					"name": "keyword.operator.assignment.c"
+				},
+				{
+					"match": "%|\\*|/|-|\\+",
+					"name": "keyword.operator.c"
+				},
+				{
+					"begin": "\\?",
+					"beginCaptures": {"0": {"name": "keyword.operator.ternary.c"}},
+					"end": ":",
+					"applyEndPatternLast": true,
+					"endCaptures": {"0": {"name": "keyword.operator.ternary.c"}
+					},
+				}
+			]
+		},
   }
 }

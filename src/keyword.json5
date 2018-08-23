@@ -1,7 +1,12 @@
 {
   "repository": {
     "keyword": {
-      "patterns": []
+      "patterns": [
+        {
+          "match": "\\b(break|case|continue|default|do|else|for|goto|if|_Pragma|return|switch|while)\\b",
+          "name": "keyword.control.c",
+        },
+      ]
     }
   }
 }

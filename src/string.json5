@@ -2,16 +2,30 @@
   "repository": {
     "string": {
       "patterns": [
-        {
-          "name": "string.quoted.single.EXTENSION",
-          "begin": "'",
-          "end": "'",
+				{
+					"name": "string.quoted.double.c",
+					"begin": "\"",
+					"beginCaptures": {"0": {"name": "punctuation.definition.string.begin.c"}},
+					"end": "\"",
+					"endCaptures": {"0": {"name": "punctuation.definition.string.end.c"}
         },
+					"patterns": [
+						{"include": "#string_escaped_char"},
+						{"include": "#string_placeholder"},
+						// {"include": "#line_continuation_character"}
+					],
+				},
         {
-          "name": "string.quoted.double.EXTENSION",
-          "begin": "\"",
-          "end": "\"",
-        },
+					"name": "string.quoted.single.c",
+					"begin": "'",
+					"beginCaptures": {"0": {"name": "punctuation.definition.string.begin.c"}},
+					"end": "'",
+					"endCaptures": {"0": {"name": "punctuation.definition.string.end.c"}},
+					"patterns": [
+						{"include": "#string_escaped_char"},
+					// 	{"include": "#line_continuation_character"}
+					],
+				}
       ]
     }
   }

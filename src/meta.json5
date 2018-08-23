@@ -1,7 +1,34 @@
 {
   "repository": {
     "meta": {
-      "patterns": []
+      "patterns": [
+        {
+          "begin": "^\\s*((#)\\s*(include(?:_next)?|import))\\b\\s*",
+          "beginCaptures": {
+            "1": {"name": "keyword.control.directive.c"},
+            "2": {"name": "punctuation.definition.directive.c"}
+          },
+          "end": "(?=(?://|/\\*))|(?<!\\\\)(?=\\n)",
+          "name": "meta.preprocessor.include.c",
+          "patterns": [
+            {"include": "#line_continuation_character"},
+            {
+              "begin": "\"",
+              "beginCaptures": {"0": {"name": "punctuation.definition.string.begin.c"}},
+              "end": "\"",
+              "endCaptures": {"0": {"name": "punctuation.definition.string.end.c"}},
+              "name": "string.quoted.double.include.c"
+            },
+            {
+              "begin": "<",
+              "beginCaptures": {"0": {"name": "punctuation.definition.string.begin.c"}},
+              "end": ">",
+              "endCaptures": {"0": {"name": "punctuation.definition.string.end.c"}},
+              "name": "string.quoted.other.lt-gt.include.c"
+            }
+          ]
+        },
+      ]
     }
   }
 }

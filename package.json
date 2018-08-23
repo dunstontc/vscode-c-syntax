@@ -1,7 +1,7 @@
 {
     "name": "vscode-c-syntax",
     "displayName": "vscode-c-syntax",
-    "description": "Syntax highlighting for C.",
+    "description": "Syntax highlighting for C. (very WIP)",
     "version": "0.0.1",
     "publisher": "dunstontc",
     "repository": {
@@ -16,9 +16,16 @@
         "languages": [
             {
                 "id": "c",
-                "aliases": ["c"],
-                "extensions": [".c"],
-                "filenames": ["c"],
+                "aliases": [
+                    "c"
+                ],
+                "extensions": [
+                    ".c",
+                    ".h"
+                ],
+                "filenames": [
+                    "c"
+                ],
                 "firstLine": "^...",
                 "configuration": "./language-configuration.json"
             }

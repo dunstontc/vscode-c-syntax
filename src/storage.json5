@@ -1,7 +1,28 @@
 {
   "repository": {
     "storage": {
-      "patterns": []
+      "patterns": [
+        {
+          "match": "\\b(const|extern|register|restrict|static|volatile|inline)\\b",
+          "name": "storage.modifier.c"
+        },
+        {
+          "begin": "^\\s*(?:((#)\\s*undef))\\b",
+          "beginCaptures": {
+            "1": {"name": "keyword.control.directive.undef.c"},
+            "2": {"name": "punctuation.definition.directive.c"}
+          },
+          "end": "(?=(?://|/\\*))|(?<!\\\\)(?=\\n)",
+          "name": "meta.preprocessor.c",
+          "patterns": [
+            {
+              "match": "[a-zA-Z_$][\\w$]*",
+              "name": "entity.name.function.preprocessor.c"
+            },
+            {"include": "#line_continuation_character"}
+          ]
+        },
+      ]
     }
   }
 }

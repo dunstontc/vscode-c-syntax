@@ -1,7 +1,16 @@
 {
   "repository": {
     "variable": {
-      "patterns": []
+      "patterns": [
+        {
+          "match": "(?>[a-zA-Z_](\\w+)?)\\s?(?=\\=)",
+          "name": "variable.other.assignment.c",
+        },
+        {
+					"match": "\\b(?<=asm|__asm__|auto|bool|_Bool|char|_Complex|double|enum|float|_Imaginary|int|long|short|signed|struct|typedef|union|unsigned|void)\\s(?>[a-zA-Z_](\\w+)?)(?!\\()",
+					"name": "variable.other.assignment.c",
+        },
+      ]
     }
   }
 }

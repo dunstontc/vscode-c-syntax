@@ -1,7 +1,22 @@
 {
   "repository": {
     "comment": {
-      "patterns": []
+      "patterns": [
+        {
+					"name": "comment.block.c",
+					"begin": "/\\*",
+					"beginCaptures": {"0": {"name": "punctuation.definition.comment.begin.c"}},
+					"end": "\\*/",
+					"endCaptures": {"0": {"name": "punctuation.definition.comment.end.c"}},
+        },
+        {
+          "begin": "//",
+          "beginCaptures": {"0": {"name": "punctuation.definition.comment.cpp"}},
+          // "end": "(?=\\n)",
+          "end": "(\n)",
+          "name": "comment.line.double-slash.cpp",
+        }
+      ]
     }
   }
 }
