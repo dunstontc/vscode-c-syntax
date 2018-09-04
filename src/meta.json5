@@ -28,6 +28,13 @@
             }
           ]
         },
+        {
+          "match": "(#define)\\s+(\\w+)",
+          "captures": {
+            "1": {"name": "keyword.control.directive.c"},
+            "2": {"name": "variable.other.constant.c"},
+          },
+        }
       ]
     }
   }
