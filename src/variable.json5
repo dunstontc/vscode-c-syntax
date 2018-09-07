@@ -7,7 +7,8 @@
           "name": "variable.other.assignment.c",
         },
         {
-					"match": "\\b(?<=asm|__asm__|auto|bool|_Bool|char|_Complex|double|enum|float|_Imaginary|int|long|short|signed|struct|typedef|union|unsigned|void)\\s(?>[a-zA-Z_](\\w+)?)(?!\\()",
+					// "match": "\\b(?<=asm|__asm__|auto|bool|_Bool|char|_Complex|double|enum|float|_Imaginary|int|long|short|signed|struct|typedef|union|unsigned|void)\\s(?>[a-zA-Z_](\\w+)?)(?!\\()",
+					"match": "\\b(?<=asm|__asm__|auto|bool|_Bool|char|_Complex|double|enum|float|_Imaginary|int|long|short|struct|typedef|union|void)\\s(?>[a-zA-Z_](\\w+)?)(?!\\()",
 					"name": "variable.other.assignment.c",
         },
       ]
