@@ -3,7 +3,7 @@
     "entity": {
       "patterns": [
         {
-          "match": "(?>[a-zA-Z_](\\w+)?)(?=\\()",
+          "match": "(?!(for|if|while))(?>[a-zA-Z_](\\w+)?)(?=\\()",
           "name": "entity.name.function.c",
         },
       ]

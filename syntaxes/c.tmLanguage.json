@@ -128,7 +128,7 @@
         "entity": {
             "patterns": [
                 {
-                    "match": "(?>[a-zA-Z_](\\w+)?)(?=\\()",
+                    "match": "(?!(for|if|while))(?>[a-zA-Z_](\\w+)?)(?=\\()",
                     "name": "entity.name.function.c"
                 }
             ]
@@ -397,8 +397,16 @@
                     "name": "variable.other.assignment.c"
                 },
                 {
-                    "match": "\\b(?<=asm|__asm__|auto|bool|_Bool|char|_Complex|double|enum|float|_Imaginary|int|struct|typedef|union|void)\\s(?>[a-zA-Z_](\\w+)?)(?!\\()",
-                    "name": "variable.other.assignment.c"
+                    "match": "(?>[a-zA-Z_](\\w+)?)(?=\\[)",
+                    "name": "variable.other.access.c"
+                },
+                {
+                    "match": "\\b(?<=asm|__asm__|auto|bool|_Bool|char|_Complex|double|enum|float|_Imaginary|int|struct|typedef|union|void)\\*?\\s(?>[a-zA-Z_]*\\w+?)(?!\\()",
+                    "captures": {
+                        "0": {
+                            "name": "variable.other.assignment.c"
+                        }
+                    }
                 }
             ]
         }

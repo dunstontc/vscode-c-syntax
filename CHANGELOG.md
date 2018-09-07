@@ -1,6 +1,10 @@
 # Change Log
 
 
+## 0.0.4 (*09-07-2018*) 
+- Don't highlight `for`, `if`, or `while` as functions.
+- More Improvements to variable highlighting.
+
 ## 0.0.3 (*09-07-2018*) 
 - More Improvements to variable highlighting.
 
