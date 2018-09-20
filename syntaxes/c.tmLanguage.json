@@ -116,7 +116,7 @@
         "constant": {
             "patterns": [
                 {
-                    "match": "\\b(NULL|true|false|TRUE|FALSE)\\b",
+                    "match": "\\b(EOF|NULL|true|false|TRUE|FALSE)\\b",
                     "name": "constant.language.c"
                 },
                 {
@@ -128,7 +128,7 @@
         "entity": {
             "patterns": [
                 {
-                    "match": "(?!(for|if|while))(?>[a-zA-Z_](\\w+)?)(?=\\()",
+                    "match": "(?!(for|if|switch|while))(?>[a-zA-Z_](\\w+)?)(?=\\()",
                     "name": "entity.name.function.c"
                 }
             ]
@@ -204,6 +204,28 @@
                             "name": "variable.other.constant.c"
                         }
                     }
+                },
+                {
+                    "begin": "\\b(asm|__asm__|auto|bool|_Bool|char|_Complex|double|enum|float|_Imaginary|int|long|short|signed|struct|typedef|union|unsigned|void)\\b",
+                    "end": "(\\=|;|$)",
+                    "beginCaptures": {
+                        "0": {
+                            "name": "storage.type.c"
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "include": "$self"
+                        },
+                        {
+                            "match": "\\b(asm|__asm__|auto|bool|_Bool|char|_Complex|double|enum|float|_Imaginary|int|long|short|signed|struct|typedef|union|unsigned|void)\\b",
+                            "name": "storage.type.c"
+                        },
+                        {
+                            "match": "\\w+(?=,|;)",
+                            "name": "variable.other.assignment.c"
+                        }
+                    ]
                 }
             ]
         },

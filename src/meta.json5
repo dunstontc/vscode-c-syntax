@@ -28,13 +28,34 @@
             }
           ]
         },
+
         {
           "match": "(#define)\\s+(\\w+)",
           "captures": {
             "1": {"name": "keyword.control.directive.c"},
             "2": {"name": "variable.other.constant.c"},
           },
-        }
+        },
+
+        {
+          // "name": "meta.preprocessor.include.c",
+          "begin": "\\b(asm|__asm__|auto|bool|_Bool|char|_Complex|double|enum|float|_Imaginary|int|long|short|signed|struct|typedef|union|unsigned|void)\\b",
+          "end": "(\\=|;|$)",
+          "beginCaptures": {
+            "0": {"name": "storage.type.c"},
+          },
+          "patterns": [
+            {"include": "$self"},
+            {
+              "match": "\\b(asm|__asm__|auto|bool|_Bool|char|_Complex|double|enum|float|_Imaginary|int|long|short|signed|struct|typedef|union|unsigned|void)\\b",
+              "name": "storage.type.c",
+            },
+            {
+              "match": "\\w+(?=,|;)",
+              "name": "variable.other.assignment.c"
+            }
+          ]
+        },
       ]
     }
   }

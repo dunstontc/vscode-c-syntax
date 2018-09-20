@@ -1,6 +1,10 @@
 # Change Log
 
 
+## 0.0.5 (*09-20-2018*) 
+- Don't highlight `switch` as a function name.
+- Improve variable highlighting.
+
 ## 0.0.4 (*09-07-2018*) 
 - Don't highlight `for`, `if`, or `while` as functions.
 - More Improvements to variable highlighting.

@@ -3,7 +3,7 @@
     "constant": {
       "patterns": [
         {
-          "match": "\\b(NULL|true|false|TRUE|FALSE)\\b",
+          "match": "\\b(EOF|NULL|true|false|TRUE|FALSE)\\b",
           "name": "constant.language.c",
         },
         {
