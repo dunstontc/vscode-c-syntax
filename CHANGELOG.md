@@ -1,6 +1,9 @@
 # Change Log
 
 
+## 0.0.7 (*09-20-2018*) 
+- Highlight pointer/address operators as storage.
+
 ## 0.0.6 (*09-20-2018*) 
 - Fix operator highlighting in variable declarations/definitions.
 

@@ -3,21 +3,26 @@
     "variable": {
       "patterns": [
         {
+          "match": "(\\*|&)([a-zA-Z_](\\w+)?)",
+          "captures": {
+            "1": {"name": "storage.pointer.c"},
+            "2": {"name": "variable.other.pointer.c"},
+          },
+        },
+        {
           "match": "(?>[a-zA-Z_](\\w+)?)\\s?(?=\\=)",
           "name": "variable.other.assignment.c",
         },
         {
           "match": "(?>[a-zA-Z_](\\w+)?)(?=\\[)",
-          "name": "variable.other.access.c",
+            "name": "variable.other.access.c",
         },
         {
 					// "match": "\\b(?<=asm|__asm__|auto|bool|_Bool|char|_Complex|double|enum|float|_Imaginary|int|long|short|signed|struct|typedef|union|unsigned|void)\\s(?>[a-zA-Z_](\\w+)?)(?!\\()",
           "match": "\\b(?<=asm|__asm__|auto|bool|_Bool|char|_Complex|double|enum|float|_Imaginary|int|struct|typedef|union|void)\\*?\\s(?>[a-zA-Z_]*\\w+?)(?!\\()",
           "captures": {
             "0": {"name": "variable.other.assignment.c"},
-            // "2": {"name": ""},
           },
-					// "name": "variable.other.assignment.c",
         },
       ]
     }

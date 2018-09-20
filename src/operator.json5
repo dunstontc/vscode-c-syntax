@@ -31,19 +31,23 @@
 					"name": "keyword.operator.comparison.c"
 				},
 				{
-					"match": "&&|!|\\|\\|",
+          "match": "&&|!|\\|\\|",
 					"name": "keyword.operator.logical.c"
 				},
-				{
-					"match": "&|\\||\\^|~",
-					"name": "keyword.operator.c"
-				},
+        {
+          "match": "\\||\\^|~",
+          "name": "keyword.operator.c"
+        },
 				{
 					"match": "=",
 					"name": "keyword.operator.assignment.c"
 				},
 				{
-					"match": "%|\\*|/|-|\\+",
+					"match": "%|/|-|\\+",
+					"name": "keyword.operator.c"
+				},
+				{
+					"match": "\\B(\\*|&)\\B",
 					"name": "keyword.operator.c"
 				},
 				{

@@ -272,7 +272,7 @@
                     "name": "keyword.operator.logical.c"
                 },
                 {
-                    "match": "&|\\||\\^|~",
+                    "match": "\\||\\^|~",
                     "name": "keyword.operator.c"
                 },
                 {
@@ -280,7 +280,11 @@
                     "name": "keyword.operator.assignment.c"
                 },
                 {
-                    "match": "%|\\*|/|-|\\+",
+                    "match": "%|/|-|\\+",
+                    "name": "keyword.operator.c"
+                },
+                {
+                    "match": "\\B(\\*|&)\\B",
                     "name": "keyword.operator.c"
                 },
                 {
@@ -422,6 +426,17 @@
         },
         "variable": {
             "patterns": [
+                {
+                    "match": "(\\*|&)([a-zA-Z_](\\w+)?)",
+                    "captures": {
+                        "1": {
+                            "name": "storage.pointer.c"
+                        },
+                        "2": {
+                            "name": "variable.other.pointer.c"
+                        }
+                    }
+                },
                 {
                     "match": "(?>[a-zA-Z_](\\w+)?)\\s?(?=\\=)",
                     "name": "variable.other.assignment.c"
