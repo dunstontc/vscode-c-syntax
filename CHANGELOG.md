@@ -1,6 +1,9 @@
 # Change Log
 
 
+## 0.0.6 (*09-20-2018*) 
+- Fix operator highlighting in variable declarations/definitions.
+
 ## 0.0.5 (*09-20-2018*) 
 - Don't highlight `switch` as a function name.
 - Improve variable highlighting.
