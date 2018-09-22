@@ -1,6 +1,9 @@
 # Change Log
 
 
+## 0.0.9 (*09-22-2018*) 
+- Highlight `struct`, `typedef`, & `union` as storage keywords.
+
 ## 0.0.8 (*09-22-2018*) 
 - Add highlight for member access operator (`.`).
 

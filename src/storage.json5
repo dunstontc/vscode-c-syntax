@@ -7,6 +7,10 @@
           "name": "storage.modifier.c"
         },
         {
+          "match": "\\b(struct|typedef|union)\\b",
+          "name": "storage.modifier.c"
+        },
+        {
           "begin": "^\\s*(?:((#)\\s*undef))\\b",
           "beginCaptures": {
             "1": {"name": "keyword.control.directive.undef.c"},

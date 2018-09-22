@@ -206,7 +206,7 @@
                     }
                 },
                 {
-                    "begin": "\\b(asm|__asm__|auto|bool|_Bool|char|_Complex|double|enum|float|_Imaginary|int|long|short|signed|struct|typedef|union|unsigned|void)\\b",
+                    "begin": "\\b(asm|__asm__|auto|bool|_Bool|char|_Complex|double|enum|float|_Imaginary|int|long|short|signed|unsigned|void)\\b",
                     "beginCaptures": {
                         "0": {
                             "name": "storage.type.c"
@@ -226,7 +226,7 @@
                             "include": "$self"
                         },
                         {
-                            "match": "\\b(asm|__asm__|auto|bool|_Bool|char|_Complex|double|enum|float|_Imaginary|int|long|short|signed|struct|typedef|union|unsigned|void)\\b",
+                            "match": "\\b(asm|__asm__|auto|bool|_Bool|char|_Complex|double|enum|float|_Imaginary|int|long|short|signed|unsigned|void)\\b",
                             "name": "storage.type.c"
                         },
                         {
@@ -327,6 +327,10 @@
                     "name": "storage.modifier.c"
                 },
                 {
+                    "match": "\\b(struct|typedef|union)\\b",
+                    "name": "storage.modifier.c"
+                },
+                {
                     "begin": "^\\s*(?:((#)\\s*undef))\\b",
                     "beginCaptures": {
                         "1": {
@@ -403,7 +407,7 @@
         "type": {
             "patterns": [
                 {
-                    "match": "\\b(asm|__asm__|auto|bool|_Bool|char|_Complex|double|enum|float|_Imaginary|int|long|short|signed|struct|typedef|union|unsigned|void)\\b",
+                    "match": "\\b(asm|__asm__|auto|bool|_Bool|char|_Complex|double|enum|float|_Imaginary|int|long|short|signed|unsigned|void)\\b",
                     "name": "storage.type.c"
                 },
                 {
@@ -450,7 +454,7 @@
                     "name": "variable.other.access.c"
                 },
                 {
-                    "match": "\\b(?<=asm|__asm__|auto|bool|_Bool|char|_Complex|double|enum|float|_Imaginary|int|struct|typedef|union|void)\\*?\\s(?>[a-zA-Z_]*\\w+?)(?!\\()",
+                    "match": "\\b(?<=asm|__asm__|auto|bool|_Bool|char|_Complex|double|enum|float|_Imaginary|int|void)\\*?\\s(?>[a-zA-Z_]*\\w+?)(?!\\()",
                     "captures": {
                         "0": {
                             "name": "variable.other.assignment.c"

@@ -19,11 +19,23 @@
         },
         {
 					// "match": "\\b(?<=asm|__asm__|auto|bool|_Bool|char|_Complex|double|enum|float|_Imaginary|int|long|short|signed|struct|typedef|union|unsigned|void)\\s(?>[a-zA-Z_](\\w+)?)(?!\\()",
-          "match": "\\b(?<=asm|__asm__|auto|bool|_Bool|char|_Complex|double|enum|float|_Imaginary|int|struct|typedef|union|void)\\*?\\s(?>[a-zA-Z_]*\\w+?)(?!\\()",
+          "match": "\\b(?<=asm|__asm__|auto|bool|_Bool|char|_Complex|double|enum|float|_Imaginary|int|void)\\*?\\s(?>[a-zA-Z_]*\\w+?)(?!\\()",
           "captures": {
             "0": {"name": "variable.other.assignment.c"},
           },
         },
+        // {
+        //   "match": "\\b(?<=typedef|union)\\*?\\s(?>[a-zA-Z_]*\\w+?)(?!\\()",
+        //   "captures": {
+        //     "0": {"name": "variable.other.assignment.c"},
+        //   },
+        // },
+        // {
+        //   "match": "\\b(?<=struct|typedef|union)\\*?\\s(?>[a-zA-Z_]*\\w+?)(?!\\()",
+        //   "captures": {
+        //     "0": {"name": "variable.other.assignment.c"},
+        //   },
+        // },
       ]
     }
   }
