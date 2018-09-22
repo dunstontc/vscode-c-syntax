@@ -1,6 +1,9 @@
 # Change Log
 
 
+## 0.0.10 (*09-22-2018*) 
+- Publishing issue with v0.0.9.
+
 ## 0.0.9 (*09-22-2018*) 
 - Highlight `struct`, `typedef`, & `union` as storage keywords.
 
