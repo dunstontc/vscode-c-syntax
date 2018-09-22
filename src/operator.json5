@@ -43,6 +43,10 @@
 					"name": "keyword.operator.assignment.c"
 				},
 				{
+					"match": "\\.",
+					"name": "keyword.operator.member.c"
+				},
+				{
 					"match": "%|/|-|\\+",
 					"name": "keyword.operator.c"
 				},

@@ -1,6 +1,9 @@
 # Change Log
 
 
+## 0.0.8 (*09-22-2018*) 
+- Add highlight for member access operator (`.`).
+
 ## 0.0.7 (*09-20-2018*) 
 - Highlight pointer/address operators as storage.
 
