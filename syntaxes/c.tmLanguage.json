@@ -280,7 +280,7 @@
                     "name": "keyword.operator.assignment.c"
                 },
                 {
-                    "match": "\\.",
+                    "match": "\\.(?!\\.)",
                     "name": "keyword.operator.member.c"
                 },
                 {
@@ -329,6 +329,10 @@
                 {
                     "match": "\\b(struct|typedef|union)\\b",
                     "name": "storage.modifier.c"
+                },
+                {
+                    "match": "\\.\\.\\.",
+                    "name": "storage.modifier.args.c"
                 },
                 {
                     "begin": "^\\s*(?:((#)\\s*undef))\\b",

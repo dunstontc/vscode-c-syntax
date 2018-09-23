@@ -11,6 +11,10 @@
           "name": "storage.modifier.c"
         },
         {
+          "match": "\\.\\.\\.",
+          "name": "storage.modifier.args.c"
+        },
+        {
           "begin": "^\\s*(?:((#)\\s*undef))\\b",
           "beginCaptures": {
             "1": {"name": "keyword.control.directive.undef.c"},
